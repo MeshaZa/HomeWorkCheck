@@ -14,7 +14,7 @@ def add(sub, what):
 
 	s = ""
 	for x, hw in subs.items():
-		s += f"{x} {hw} \n" 
+		s += str(x) + "{hw} \n"
 
 	with open('Hw.txt', 'w') as obj:
 		obj.write(s)
@@ -70,7 +70,7 @@ while True:
         	elif message == 'descr':
         		s = ""
         		for x, hw in subs.items():
-        			s += f"* {x} -> {hw} \n\n\n" 
+        			s += "* ", str(x)," -> ", str(hw), "\n\n\n" 
         			say(id, s)
         	else:
         		say(id, (['Упс что-то пошло не так...','Дура тупая писать научись (((((((((((('][random.randint(0,1)]))    
